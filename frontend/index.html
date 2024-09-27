@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <title>Document</title>
+</head>
+<body class="bg-black">
+    <div class="text-blue-600 pl-[650px] pt-11 py-[10px] text-[50px]">Auto Ml</div>
+    <div class="flex h-screen">
+        <!-- Left Column: Button Stack -->
+        <div class="flex flex-col items-start justify-center p-4 space-y-4 w-1/4 pl-[80px]">
+            <button id="upload" class="bg-blue-500 text-white py-6 px-8 text-lg rounded shadow-lg transition duration-300 hover:bg-blue-700 hover:shadow-2xl hover:shadow-blue-500">Upload</button>
+            <button id="Preprocessing" class="bg-blue-500 text-white py-6 px-8 text-lg rounded shadow-lg transition duration-300 hover:bg-blue-700 hover:shadow-2xl hover:shadow-blue-500">PreProcessing</button>
+            <button id="Hypertuning" class="bg-blue-500 text-white py-6 px-8 text-lg rounded shadow-lg transition duration-300 hover:bg-blue-700 hover:shadow-2xl hover:shadow-blue-500">Hypertuning</button>
+            <button id="Training" class="bg-blue-500 text-white py-6 px-8 text-lg rounded shadow-lg transition duration-300 hover:bg-blue-700 hover:shadow-2xl hover:shadow-blue-500">Training</button>
+            <button id="Auto" class="bg-blue-500 text-white py-6 px-8 text-lg rounded shadow-lg transition duration-300 hover:bg-blue-700 hover:shadow-2xl hover:shadow-blue-500">Auto</button>
+        </div>
+
+        <!-- Right Column: Upload Interface -->
+        <div id="uploadInterface" class="flex flex-col justify-start items-start p-[100px] w-3/4 pt-[220px] bg-black">
+            <h1 class="text-blue-800 text-[40px] pb-[30px] font-extralight pt-0">Upload Your Dataset</h1>
+            <div class="flex">
+                <input type="file" id="datasetFile" class="mb-4 text-[20px] text-white" accept=".csv,.xlsx,.json">
+                <button id="submitDataset" class="bg-blue-500 text-white py-2 px-4 rounded pr-[20px]">Upload Dataset</button>
+            </div> 
+            <div id="datasetPreview" class="mt-4 text-white"></div>
+            <button id="showDataset" class="bg-blue-500 text-white py-6 px-8 text-lg rounded shadow-lg transition duration-300 hover:bg-blue-700 hover:shadow-2xl hover:shadow-blue-500">Show Dataset</button>
+            <div id="datasetContainer" class="mt-6">
+                <table id="datasetTable" class="min-w-full bg-black text-white table-auto border-separate border-spacing-2">
+                    <thead>
+                        <tr class="bg-blue-800">
+                            <!-- Dynamic column names will go here -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic rows of data will go here -->
+                    </tbody>
+                </table>
+            </div>
+            
+
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
